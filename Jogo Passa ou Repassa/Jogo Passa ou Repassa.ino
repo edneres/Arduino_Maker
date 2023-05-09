@@ -4,10 +4,10 @@
 //   2022   //
 //////////////
 
-int b1 = 7, b2 = 4, b3_reset = 2;
-int e1 = 0, e2 = 0, e3 = 0;
-int led1 = 13, led2 = 8;
-int flag = 0; // flag == 1 >> ninguém pode mais apertar o botão >> Trava
+int b1 = 3, b2 = 4, b3_reset = 5;   // Botões
+int e1 = 0, e2 = 0, e3 = 0;         // Estado dos Botões        
+int led1 = 8, led2 = 9;             // LEDs
+int flag = 0;   // flag == 1 >> ninguém pode mais apertar o botão >> Trava
 
 void setup()
 {
