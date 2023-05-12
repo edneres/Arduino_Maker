@@ -1,5 +1,16 @@
+//////////////
+// EDIVÂNIA //
+//  UFPI    //
+//  2023    //
+//////////////
+
+/*
+  OBS: Há um botão para o Reset do Arduino que está ligado ao GND e ao pino de "Reset"
+       e usa o resistor interno de PULL-UP >> quando o botão é pressionado a o Reset
+*/
+
 // DEFINIÇÕES //
-#define LED            2      // Led e Buzzer
+#define LED            4      // Led e Buzzer
 #define Bot_L          7      // Botão para a esquerda
 #define Bot_S          6      // Botão seletor
 #define Bot_R          5      // Botão para a direita
@@ -68,7 +79,7 @@ void setup()
   display.setCursor(3, 0);           // (coluna, linha)
   display.print("MORSE CODE");       // Printa no Display
   delay(200);
-  display.setCursor(0, 1);           // (coluna, linha)
+  display.setCursor(0, 1);                 // (coluna, linha)
   display.print("-- --- .-. ... .");       // Printa no Display
   delay(2000);
 
@@ -97,11 +108,6 @@ void loop()
       opcao_2();
     break;
   }
-
-  display.backlight();
-  display.setCursor(0, 0);           // (coluna, linha)
-  display.print("Voltando ao Menu");
-  delay(2000);
 }
 
 // DESENVOLVIMENTO DAS FUNÇÕES //
@@ -115,7 +121,6 @@ int MENU(void)
   {
     // LEITURAS DOS ESTADOS DOS BOTÕES //
     estado_Bot_L = digitalRead(Bot_L);
-    estado_Bot_S = digitalRead(Bot_S);  //
     estado_Bot_R = digitalRead(Bot_R);
 
     // CONFIGURAÇÃO DO "Bot_L" // 
@@ -253,15 +258,13 @@ void opcao_1(void)
 {
   display.backlight();               // Liga a luz de fundo do LCD
   display.setCursor(0, 0);           // (coluna, linha)
-  display.print("Digite 3 frases");  
+  display.print("Digite frases no");  
   display.setCursor(0, 1);           
   display.print("(Monitor Serial)");  
   delay(2000);
   display.clear();
 
-  int cont = 3;
-
-  while(cont > 0)
+  while(1)
   {
     Serial.println("Frase a ser codificada:");
     frase = recebe_frase();   // Recebe o que foi digitado no Monitor Serial
@@ -274,8 +277,6 @@ void opcao_1(void)
     delay(100);
     Serial.println();
     Serial.println();
-
-    cont--;
   }
 }
 
@@ -316,13 +317,13 @@ void codifica_codigo(String codigo)   // Usado na opção 2
 
 void opcao_2(void)
 {
-  int i, cont = 5;
+  int i;
   String caractere; 
 
   display.backlight();
   delay(100);
 
-  while(cont != 0)
+  while(1)
   {
     i = random(0, 36);      // (não pega o último que é " ") Sorteia um número aleatório para "i"
 
@@ -406,10 +407,5 @@ void opcao_2(void)
         trava = 1;
       }
     }
-
-    cont--;
   }
 }
-
-
-
