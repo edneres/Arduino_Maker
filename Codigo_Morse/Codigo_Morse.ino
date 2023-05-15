@@ -10,7 +10,7 @@
 */
 
 // DEFINIÇÕES //
-#define LED            4      // Led e Buzzer
+#define LED            3      // Led e Buzzer
 #define Bot_L          7      // Botão para a esquerda
 #define Bot_S          6      // Botão seletor
 #define Bot_R          5      // Botão para a direita
@@ -37,16 +37,16 @@ char ligaLed[2] = {'.', '-'};
 char alfabeto[37] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
                      'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
                      'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                     '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' '
+                     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' '
 };
                     
 char morse[37][7] = {{ ".- "}, {"-... "}, {"-.-. "}, {"-.. "}, {". "}, {"..-. "},
                     {"--. "}, { ".... "}, {".. " }, {".--- "}, {"-.- "}, {".-.. "},
                     {"-- "}, {"-. "}, {"--- "}, { ".--. "}, {"--.- "}, { ".-. "},
                     {"... "}, {"- "}, {"..- "}, {"...- "}, {".-- "}, {"-..- "},
-                    {"-.-- "}, {"--.. "}, {".---- "}, {"--..- "}, {"...-- "},
+                    {"-.-- "}, {"--.. "}, {"----- "}, {".---- "}, {"..--- "}, {"...-- "},
                     {"....- "}, {"..... "}, {"-.... "}, {"--... "}, {"---.. "},
-                    {"----. "}, {"----- "}, {" "}
+                    {"----. "}, {" "}
 };
 
 
@@ -260,7 +260,7 @@ void opcao_1(void)
   display.setCursor(0, 0);           // (coluna, linha)
   display.print("Digite frases no");  
   display.setCursor(0, 1);           
-  display.print("(Monitor Serial)");  
+  display.print(" Monitor Serial ");  
   delay(2000);
   display.clear();
 
