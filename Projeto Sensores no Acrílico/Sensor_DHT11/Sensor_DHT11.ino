@@ -26,7 +26,7 @@ void setup()
 
 void loop() 
 {
-  dht11.humidity().getSensor(&sensor);      // Mostra os detalhes do Sensor DHT
+  dht11.humidity().getSensor(&sensor);      // Mostra os detalhes do Sensor DHT11
   display.setFontSize(FONT_SIZE_MEDIUM);
   display.setCursor(27, 0);
   display.println("DETALHES");
@@ -41,7 +41,7 @@ void loop()
   delay(3000);
   display.clear(0, 0, 128, 64);   // Limpa todo o display
 
-  delayMS = sensor.min_delay / 1000;            // define o atraso entre as leituras
+  delayMS = sensor.min_delay / 1000;              // Define o atraso entre as leituras
 
   display.setFontSize(FONT_SIZE_MEDIUM);
   display.setCursor(35, 0);
@@ -49,39 +49,39 @@ void loop()
 
   while(1)
   {
-    sensors_event_t event;                        // inicializa o evento da Temperatura
-    dht11.temperature().getEvent(&event);           // faz a leitura da Temperatura
+    sensors_event_t event;                        // Inicializa o evento "Temperatura"
+   dht11.temperature().getEvent(&event);          // Faz a leitura da temperatura
       
-    if (isnan(event.temperature))                 // se algum erro na leitura
+    if (isnan(event.temperature))                 // Se houver algum erro na leitura...
     {
       display.println("Erro na leitura da Temperatura!");
     }
       
-    else                                          // senão
+    else                                          // Senão...
     {
       display.setFontSize(FONT_SIZE_SMALL);
       display.setCursor(0, 3);
-      display.print("Temperatura: ");              // imprime a Temperatura
-      display.print(event.temperature);
+      display.print("Temperatura: ");          
+      display.print(event.temperature);           // Imprime a Temperatura
       display.println(" *C");
     }
       
-    dht11.humidity().getEvent(&event);              // faz a leitura de umidade
-      
-    if (isnan(event.relative_humidity))           // se algum erro na leitura
+    dht11.humidity().getEvent(&event);            // Faz a leitura de umidade
+     
+    if (isnan(event.relative_humidity))           // Se houver algum erro na leitura...
     {
       display.println("Erro na leitura da Umidade!");
     }
       
-    else                                          // senão
+    else                                          // Senão...
     {
       display.setFontSize(FONT_SIZE_SMALL);
       display.setCursor(0, 4);
-      display.print("Umidade:     ");                  // imprime a Umidade
-      display.print(event.relative_humidity);
+      display.print("Umidade:     ");            
+      display.print(event.relative_humidity);     // Imprime a Umidade
       display.println(" %");
     }
 
-    delay(delayMS);                               // atraso entre as medições 
+    delay(delayMS);                               // Atraso entre as medições 
   }
 }
