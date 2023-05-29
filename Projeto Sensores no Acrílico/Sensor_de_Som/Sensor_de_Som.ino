@@ -7,9 +7,7 @@ LCD_SSD1306 display;      // Para módulo contralado pelo CI SSD1306 OLED
 
 // VARIÁVEIS //
 int pino_analogico = A5;
-int pino_digital = 6;
 int valor_A0 = 0;
-int valor_D = 0;
 
 void setup()
 {
