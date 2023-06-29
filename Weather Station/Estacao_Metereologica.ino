@@ -3,7 +3,6 @@
 #define senChuvaPin    A0     
 #define DHT11Pin       A1
 
-#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include "dht.h"
 
