@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////////////
+// Acadêmica de Egenharia Elétrica Maria Edivânia Neres de Sousa //
+// Universidade Federal do Piauí                                 //
+// Teresina, Piauí. 14/04/2023                                   //
+///////////////////////////////////////////////////////////////////
+
 // DEFINIÇÕES //
 #define LED            3      // Led e Buzzer
 #define Bot_L          7      // Botão para a esquerda
