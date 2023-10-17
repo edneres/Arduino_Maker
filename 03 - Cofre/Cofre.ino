@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////////////
+// Acadêmica de Egenharia Elétrica Maria Edivânia Neres de Sousa //
+// Universidade Federal do Piauí                                 //
+// Teresina, Piauí. 11/04/2023                                   //
+///////////////////////////////////////////////////////////////////
+
 #define PIN   3           // LED verde e Buzzer alegre
 //#define RELE  2
 
