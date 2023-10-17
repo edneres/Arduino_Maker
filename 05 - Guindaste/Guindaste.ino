@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////////////
+// Acadêmica de Egenharia Elétrica Maria Edivânia Neres de Sousa //
+// Universidade Federal do Piauí                                 //
+// Teresina, Piauí. 27/03/2023                                   //
+///////////////////////////////////////////////////////////////////
+
 #define Button  6
 
 #include <Servo.h>
