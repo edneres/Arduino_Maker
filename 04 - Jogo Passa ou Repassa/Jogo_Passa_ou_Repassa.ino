@@ -1,8 +1,8 @@
-//////////////
-// EDIVÂNIA //
-//   UFPI   //
-//   2022   //
-//////////////
+///////////////////////////////////////////////////////////////////
+// Acadêmica de Egenharia Elétrica Maria Edivânia Neres de Sousa //
+// Universidade Federal do Piauí                                 //
+// Teresina, Piauí. 09/05/2023                                   //
+///////////////////////////////////////////////////////////////////
 
 int b1 = 3, b2 = 4, b3_reset = 5;
 int e1 = 0, e2 = 0, e3 = 0;
