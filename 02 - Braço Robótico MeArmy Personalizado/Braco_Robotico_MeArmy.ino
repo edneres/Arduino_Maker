@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////////////
+// Acadêmica de Egenharia Elétrica Maria Edivânia Neres de Sousa //
+// Universidade Federal do Piauí                                 //
+// Teresina, Piauí. 10/08/2023                                   //
+///////////////////////////////////////////////////////////////////
+
 #include <Servo.h>
 
 // Instanciação dos Servos
